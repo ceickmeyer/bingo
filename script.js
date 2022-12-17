@@ -23,7 +23,7 @@ const fruits = [
   "Chekhov's Gun",
   "Bad Guy Monologue",
   "Private Detective",
-  "Kid Actor",
+  "Kid actor",
   "Foreshadowing",
   "Grizzled Detective",
 ];
@@ -55,13 +55,24 @@ fruitCells.forEach((cell) => {
   // Don't add an event listener to the center cell
   if (cell.innerHTML !== "Free Space") {
     cell.addEventListener("click", (event) => {
-      // Check the current background color of the cell
-      if (event.target.style.backgroundColor === "red") {
-        // If the cell is red, change it to white
-        event.target.style.backgroundColor = "white";
+      // Get the computed style of the element
+      const computedStyle = window.getComputedStyle(event.target);
+
+      // Check the computed background color of the cell
+      if (computedStyle.backgroundColor === "rgb(255, 255, 255)") {
+        // If the cell is white, change it to a random Christmas-themed color
+        const christmasColors = [
+          "#f5624e",
+          "#cc221e",
+          "#33a560",
+          "#0f8a5e",
+          "#235e6e",
+        ];
+        const randomIndex = Math.floor(Math.random() * christmasColors.length);
+        event.target.style.backgroundColor = christmasColors[randomIndex];
       } else {
-        // If the cell is white, change it to red
-        event.target.style.backgroundColor = "red";
+        // If the cell is not white, change it to white
+        event.target.style.backgroundColor = "white";
       }
     });
   }
