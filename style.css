@@ -28,6 +28,7 @@ td {
 body {
   background-image: url('image.jpg');
   background-size: cover;
+  
   background-repeat: no-repeat;
   background-position: center top;  /* Center the image horizontally and fix it to the top of the page */
   background-attachment: fixed;  /* Fix the image in place so it does not scroll with the page */

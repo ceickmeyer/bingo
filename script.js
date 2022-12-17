@@ -51,12 +51,18 @@ fruitCells.forEach((cell, index) => {
   }
 });
 
-// Add event listeners to each cell
 fruitCells.forEach((cell) => {
   // Don't add an event listener to the center cell
   if (cell.innerHTML !== "Free Space") {
     cell.addEventListener("click", (event) => {
-      event.target.style.backgroundColor = "red";
+      // Check the current background color of the cell
+      if (event.target.style.backgroundColor === "red") {
+        // If the cell is red, change it to white
+        event.target.style.backgroundColor = "white";
+      } else {
+        // If the cell is white, change it to red
+        event.target.style.backgroundColor = "red";
+      }
     });
   }
 });
