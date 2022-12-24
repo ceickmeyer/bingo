@@ -22,10 +22,14 @@ const fruits = [
   "MacGyvering",
   "Chekhov's Gun",
   "Bad Guy Monologue",
-  "Private Detective",
+  "Private Dick",
   "Kid actor",
   "Foreshadowing",
   "Grizzled Detective",
+  "Ambulance Wrapup",
+  "Slick Bad Dude(s)",
+  "Accidental Death",
+  "Broken Glass",
 ];
 
 // Shuffle the fruit array
